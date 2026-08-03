@@ -2,15 +2,8 @@ import {
   useState,
   //  useEffect
 } from "react";
-import {
-  Sun,
-  Moon,
-  Github,
-  Linkedin,
-  Mail,
-  ArrowUpRight,
-  ExternalLink,
-} from "lucide-react";
+import { Sun, Moon, Mail, ArrowUpRight, ExternalLink } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 /**
  * PERSONAL PORTFOLIO — React + Tailwind
@@ -67,7 +60,7 @@ const PROJECTS = [
   {
     title: "TaskManagerApp",
     description: "Save,Edit and Delete task with due dates and Email reminders",
-    tags: ["React", "Tailwind", "OpenWeather API"],
+    tags: ["React", "Tailwind", "MySQL", "Nodejs"],
     live: "https://example.com",
     repo: "https://github.com/Martinssx1/taskManager",
     featured: false,
@@ -206,8 +199,12 @@ function Hero() {
         </a>
 
         <div className="ml-auto flex gap-2">
-          <IconLink href={PROFILE.github} icon={Github} label="GitHub" />
-          <IconLink href={PROFILE.linkedin} icon={Linkedin} label="LinkedIn" />
+          <IconLink href={PROFILE.github} icon={FaGithub} label="GitHub" />
+          <IconLink
+            href={PROFILE.linkedin}
+            icon={FaLinkedin}
+            label="LinkedIn"
+          />
           <IconLink
             href={`mailto:${PROFILE.email}`}
             icon={Mail}
@@ -247,7 +244,7 @@ function ProjectCard({ project }) {
             className="rounded-md p-1.5 text-zinc-400 hover:bg-zinc-100 hover:text-emerald-600 dark:hover:bg-zinc-800 dark:hover:text-emerald-400"
             aria-label={`${project.title} repository`}
           >
-            <Github size={14} />
+            <FaGithub size={14} />
           </a>
         </div>
       </div>
@@ -360,8 +357,12 @@ function Footer() {
           Tailwind.
         </p>
         <div className="flex gap-2">
-          <IconLink href={PROFILE.github} icon={Github} label="GitHub" />
-          <IconLink href={PROFILE.linkedin} icon={Linkedin} label="LinkedIn" />
+          <IconLink href={PROFILE.github} icon={FaGithub} label="GitHub" />
+          <IconLink
+            href={PROFILE.linkedin}
+            icon={FaLinkedin}
+            label="LinkedIn"
+          />
         </div>
       </div>
     </footer>
