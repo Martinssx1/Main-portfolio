@@ -191,6 +191,10 @@ const STYLES = `
   .pf-hero > * { position: relative; z-index: 1; }
   .pf-kit-tag { color: var(--muted); }
   .pf-kit-tag::before { content: ""; width: 18px; height: 2px; background: var(--trim); display: inline-block; }
+  .pf-greeting {
+    font-family: 'Inter', sans-serif; text-transform: none; letter-spacing: normal;
+    color: var(--muted); font-weight: 500;
+  }
   .pf-hero h1 { color: var(--ink); font-weight: 700; }
   .pf-hero h1 em { font-style: normal; color: var(--accent); }
 
@@ -329,7 +333,7 @@ function Nav({ theme, onToggle }) {
       <div className="max-w-260 mx-auto flex items-center justify-between px-7 h-16">
         <div className="flex items-center gap-2.5 text-[15px] font-semibold tracking-wide">
           <span className="pf-ball-mark"></span>
-          {PROFILE.name}
+          Martinsportfolio
         </div>
         <div className="pf-nav-links hidden sm:flex gap-9">
           <a href="#work" className="no-underline">
@@ -357,6 +361,9 @@ function Hero() {
         <div className="pf-kit-tag inline-flex items-center gap-2 text-xs mb-4">
           {PROFILE.role}
         </div>
+        <p className="pf-greeting text-sm sm:text-base mb-1.5">
+          Hi 👋, my name is
+        </p>
         <h1 className="text-[48px] sm:text-[72px] md:text-[92px] leading-[0.94]">
           {first}
           <br />
